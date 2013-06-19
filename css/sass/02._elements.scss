@@ -1,0 +1,42 @@
+/**
+ * element.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+
+.container {
+  overflow: hidden;
+}
+
+.instructions {
+  margin-top: $spacing*2;
+}
+.btn {
+  @include inline_block();
+  color: $text_light;
+  background: #555;
+  margin: 0 .1em;
+  padding: .2em .5em;
+
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+
+  @include link_each_pseudo_element($text_light, $text_light, $text_light, $text_light);
+  &:hover { background: $link_dark; }
+}
+
+.btn-key {
+  border: solid 2px #777;
+  background: #fff;
+  color: #555;
+  &:hover { background: #fff; }
+}
+
+.img-fill { width: 100%; }
+.img-left { float: left; margin-right: $spacing; }
+.img-rounded {
+  display: inline-block;
+  border: solid 8px #ccc;
+  border-radius: 20px;
+  margin: 4px
+}

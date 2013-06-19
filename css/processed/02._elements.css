@@ -1,0 +1,75 @@
+/**
+ * element.scss
+ */
+/* line 7, ../sass/02._elements.scss */
+.container {
+  overflow: hidden;
+}
+
+/* line 11, ../sass/02._elements.scss */
+.instructions {
+  margin-top: 40px;
+}
+
+/* line 14, ../sass/02._elements.scss */
+.btn {
+  display: inline-block;
+  *display: block;
+  *zoom: 1;
+  color: #bbbbbb;
+  background: #555;
+  margin: 0 0.1em;
+  padding: 0.2em 0.5em;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+}
+/* line 69, ../sass/_modules/_mixins.scss */
+.btn:link {
+  color: #bbbbbb;
+}
+/* line 70, ../sass/_modules/_mixins.scss */
+.btn:visited {
+  color: #bbbbbb;
+}
+/* line 71, ../sass/_modules/_mixins.scss */
+.btn:hover {
+  color: #bbbbbb;
+}
+/* line 72, ../sass/_modules/_mixins.scss */
+.btn:active {
+  color: #bbbbbb;
+}
+/* line 25, ../sass/02._elements.scss */
+.btn:hover {
+  background: #222222;
+}
+
+/* line 28, ../sass/02._elements.scss */
+.btn-key {
+  border: solid 2px #777777;
+  background: #fff;
+  color: #555;
+}
+/* line 32, ../sass/02._elements.scss */
+.btn-key:hover {
+  background: #fff;
+}
+
+/* line 35, ../sass/02._elements.scss */
+.img-fill {
+  width: 100%;
+}
+
+/* line 36, ../sass/02._elements.scss */
+.img-left {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 37, ../sass/02._elements.scss */
+.img-rounded {
+  display: inline-block;
+  border: solid 8px #cccccc;
+  border-radius: 20px;
+  margin: 4px;
+}
