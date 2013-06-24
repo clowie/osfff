@@ -154,8 +154,8 @@
   // SLIDE ======================================================================== //
   var slideSuck = new TimelineMax();
   // outro prev slide
-  slideSuck.add(TweenMax.to($('#slide-famous'),0.25,{opacity:0}));
-  slideSuck.add(TweenMax.to($('#slide-famous'),0,{immediateRender:false,css:{display:'none'}}));
+  slideSuck.add(TweenMax.to($('#slide-epic'),0.25,{opacity:0}));
+  slideSuck.add(TweenMax.to($('#slide-epic'),0,{immediateRender:false,css:{display:'none'}}));
 
   // intro
   slideSuck.add(TweenMax.to($('#slide-suck'),0,{immediateRender:false,css:{display:'block'}}));
