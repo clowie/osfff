@@ -41,3 +41,23 @@
   border-radius: 20px;
   margin: 4px
 }
+#touch-controls {
+  display: none;
+}
+.touch #touch-controls { 
+  display: block;
+  position: absolute;
+  opacity: .5;
+  width: 100%;
+  bottom: 0;
+  #btn-prev {
+    position: absolute;
+    bottom: $spacing;
+    left: $spacing;
+  }
+  #btn-next {
+    position: absolute;
+    bottom: $spacing;
+    right: $spacing;
+  }
+}

@@ -529,20 +529,5 @@
     }
   });
 
-  // add touch control, requires hammer.js - https://github.com/EightMedia/hammer.js/wiki/Getting-Started
-  $('.touch').hammer()
-    .on('swipeleft', '.slide', function(event) {
-      deck.prev();
-    })
-    .on('swipeup', '.slide', function(event) {
-      deck.prev();
-    })
-    .on('swiperight', '.slide', function(event) {
-      deck.next();
-    })
-    .on('swipedown', '.slide', function(event) {
-      deck.next();
-    });
-
 
 }(jQuery));

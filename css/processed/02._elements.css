@@ -75,3 +75,29 @@
   border-radius: 20px;
   margin: 4px;
 }
+
+/* line 44, ../sass/02._elements.scss */
+#touch-controls {
+  display: none;
+}
+
+/* line 47, ../sass/02._elements.scss */
+.touch #touch-controls {
+  display: block;
+  position: absolute;
+  opacity: .5;
+  width: 100%;
+  bottom: 0;
+}
+/* line 53, ../sass/02._elements.scss */
+.touch #touch-controls #btn-prev {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+/* line 58, ../sass/02._elements.scss */
+.touch #touch-controls #btn-next {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

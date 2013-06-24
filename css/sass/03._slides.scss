@@ -3,7 +3,6 @@
  */
 @import '_modules/vars';
 @import '_modules/mixins';
-@import "compass/css3/box-shadow";
 
 
 .no-js {
@@ -49,13 +48,13 @@
 }
 .container-center:before {
   content: '';
-  display: inline-block;
+  @include inline_block();
   height: 100%;
   vertical-align: middle;
   margin-right: -0.25em; /* Adjusts for spacing */
 }
 .content-center {
-	display: inline-block;
+	@include inline_block();
 	vertical-align: middle;
 	width: 94%;
 	.step {
@@ -108,8 +107,12 @@
 }
 
 .js {
-	#slide-title h1 { color: rgba(0,0,0,.75); }
-	#slide-github,#slide-famous,#slide-learning,#slide-me { color: $text_light; }
+	#slide-title h1 { 
+		color: rgba(0,0,0,.75); 
+	}
+	#slide-github,#slide-famous,#slide-learning,#slide-me { 
+		color: $text_light; 
+	}
 	#slide-learning h3 { color: $text_dark; }
 	#slide-learning {
 		.step1 {
