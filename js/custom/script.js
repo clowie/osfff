@@ -120,37 +120,6 @@
   tl.add(slideEpic);
 
 
-  // // SLIDE ======================================================================== //
-  // var slideFamous = new TimelineMax();
-  // // outro prev slide
-  // slideFamous.add(TweenMax.to($('#slide-epic'),0.25,{opacity:0}));
-  // slideFamous.add(TweenMax.to($('#slide-epic'),0,{immediateRender:false,css:{display:'none'}}));
-
-  // // intro
-  // slideFamous.add(TweenMax.to($('#slide-famous'),0,{immediateRender:false,css:{display:'block'}}));
-  // slideFamous.add(TweenMax.to($('body'),0.75,{backgroundColor:'#d63dbc'}),0);
-  // slideFamous.add(TweenMax.from($('#slide-famous .step1'),0.5,{opacity:0,rotationX:360, transformOrigin:"50% 50%", perspective:2000,ease:Expo.easeOut}));
-
-  // var slideFamous1 = new TimelineMax();
-  // slideFamous1.add(TweenMax.from($('#slide-famous .step1'),0.25,{top:210,ease:Expo.easeInOut}));
-  // slideFamous1.add(TweenMax.to($('#slide-famous .step2'),0,{immediateRender:false,css:{display:'block'}}));
-  // slideFamous1.add(TweenMax.from($('#slide-famous .step2'),0.25,{opacity:0}));
-
-  // var slideFamous2 = new TimelineMax();
-  // slideFamous2.add(TweenMax.to($('#slide-famous .step2'),0.5,{opacity:0}));
-  // slideFamous2.add(TweenMax.to($('#slide-famous .step2 img'),0.5,{rotationY:720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeIn, delay:-0.5}));
-  // slideFamous2.add(TweenMax.to($('#slide-famous .step2'),0,{immediateRender:false,css:{display:'none'}}));
-  // slideFamous2.add(TweenMax.from($('#slide-famous .step3'),0.01,{css:{display:'none'}}));
-  // slideFamous2.add(TweenMax.from($('#slide-famous .step3'),0.5,{opacity:0,delay:0.01}));
-  // slideFamous2.add(TweenMax.from($('#slide-famous .step3 img'),0.5,{rotationY:720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeOut, delay:-0.5}));
-  // slideFamous2.add(TweenMax.to($('body'),0.5,{backgroundColor:'#344cb1',delay:-0.5}));
-
-
-  // tl.add(slideFamous);
-  // tl.add(slideFamous1);
-  // tl.add(slideFamous2);
-
-
   // SLIDE ======================================================================== //
   var slideSuck = new TimelineMax();
   // outro prev slide
@@ -316,32 +285,10 @@
 
 
   // SLIDE ======================================================================== //
-  var slideSecrets = new TimelineMax();
-  // outro prev slide
-  slideSecrets.add(TweenMax.to($('#slide-hotsnot'),0.25,{opacity:0}));
-  slideSecrets.add(TweenMax.to($('#slide-hotsnot'),0,{immediateRender:false,css:{display:'none'}}));
-
-  // intro
-  slideSecrets.add(TweenMax.to($('#slide-secrets'),0,{immediateRender:false,css:{display:'block'}}));
-  slideSecrets.add(TweenMax.from($('#slide-secrets .title'),0.5,{opacity:0}));
-  slideSecrets.add(TweenMax.from($('#slide-secrets .step1'),0.75,{opacity:0,rotationY:-90, transformOrigin:"50% bottom -500", perspective:500,ease:Expo.easeIn}));
-  slideSecrets.add(TweenMax.to($('body'),1,{backgroundColor:'#e68500'}),0);
-  tl.add(slideSecrets);
-
-  var slideSecrets1 = new TimelineMax();
-  slideSecrets1.add(TweenMax.from($('#slide-secrets .step2'),0.75,{opacity:0,rotationY:-90, transformOrigin:"50% bottom -500", perspective:500,ease:Expo.easeIn}));
-  tl.add(slideSecrets1);
-
-  var slideSecrets2 = new TimelineMax();
-  slideSecrets2.add(TweenMax.from($('#slide-secrets .step3'),0.75,{opacity:0,rotationY:-90, transformOrigin:"50% bottom -500", perspective:500,ease:Expo.easeIn}));
-  tl.add(slideSecrets2);
-
-
-  // SLIDE ======================================================================== //
   var slideHero = new TimelineMax();
   // outro prev slide
-  slideHero.add(TweenMax.to($('#slide-secrets'),0.25,{opacity:0}));
-  slideHero.add(TweenMax.to($('#slide-secrets'),0,{immediateRender:false,css:{display:'none'}}));
+  slideHero.add(TweenMax.to($('#slide-hotsnot'),0.25,{opacity:0}));
+  slideHero.add(TweenMax.to($('#slide-hotsnot'),0,{immediateRender:false,css:{display:'none'}}));
 
   // intro
   slideHero.add(TweenMax.to($('#slide-hero'),0,{immediateRender:false,css:{display:'block'}}));

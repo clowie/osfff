@@ -141,13 +141,13 @@
 }
 /* line 115, ../sass/03._slides.scss */
 .js #slide-learning .step1 {
-  margin-top: 60px;
+  margin-top: 180px;
   letter-spacing: 1px;
 }
 /* line 119, ../sass/03._slides.scss */
 .js #slide-learning .step2, .js #slide-learning .step3, .js #slide-learning .step4 {
   position: absolute;
-  top: 160px;
+  top: 320px;
   width: 100%;
   letter-spacing: 1px;
 }
@@ -188,7 +188,7 @@
 /* line 158, ../sass/03._slides.scss */
 .js #slide-success .step {
   position: absolute;
-  top: 180px;
+  top: 270px;
   width: 100%;
   padding: 0 5%;
 }
@@ -196,7 +196,7 @@
 .js #slide-hotsnot .step {
   position: absolute;
   width: 100%;
-  top: 180px;
+  top: 240px;
 }
 /* line 171, ../sass/03._slides.scss */
 .js #slide-hotsnot .step1a, .js #slide-hotsnot .step1b {
@@ -208,11 +208,11 @@
 }
 /* line 177, ../sass/03._slides.scss */
 .js #slide-hotsnot .step3 {
-  top: 240px;
+  top: 270px;
 }
 /* line 180, ../sass/03._slides.scss */
 .js #slide-hotsnot .step4 {
-  top: 60px;
+  top: 120px;
 }
 /* line 185, ../sass/03._slides.scss */
 .js #slide-secrets h2, .js #slide-secrets h3 {
@@ -221,14 +221,14 @@
 /* line 190, ../sass/03._slides.scss */
 .js #slide-how .title {
   position: absolute;
-  top: 30px;
+  top: 120px;
   width: 100%;
 }
 /* line 195, ../sass/03._slides.scss */
 .js #slide-how .step {
   position: absolute;
   width: 100%;
-  top: 180px;
+  top: 240px;
   left: 0;
   padding: 0 5%;
 }
