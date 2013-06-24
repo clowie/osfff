@@ -26,17 +26,17 @@
 }
 
 .btn-key {
-  border: solid 2px #777;
+  border: solid 3px rgba(0,0,0,.5);
   background: #fff;
   color: #555;
-  &:hover { background: #fff; }
+  &:hover { background: #fff; color:#555; }
 }
 
 .img-fill { width: 100%; }
 .img-left { float: left; margin-right: $spacing; }
 .img-rounded {
   display: inline-block;
-  border: solid 8px #ccc;
+  border: solid 8px rgba(0,0,0,.25);
   border-radius: 20px;
   margin: 4px
 }

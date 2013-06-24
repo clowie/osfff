@@ -16,7 +16,7 @@
   display: inline-block;
   *display: block;
   *zoom: 1;
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.8);
   background: #555;
   margin: 0 0.1em;
   padding: 0.2em 0.5em;
@@ -25,34 +25,35 @@
 }
 /* line 69, ../sass/_modules/_mixins.scss */
 .btn:link {
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.8);
 }
 /* line 70, ../sass/_modules/_mixins.scss */
 .btn:visited {
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.8);
 }
 /* line 71, ../sass/_modules/_mixins.scss */
 .btn:hover {
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.8);
 }
 /* line 72, ../sass/_modules/_mixins.scss */
 .btn:active {
-  color: #bbbbbb;
+  color: rgba(255, 255, 255, 0.8);
 }
 /* line 25, ../sass/02._elements.scss */
 .btn:hover {
-  background: #222222;
+  background: rgba(0, 0, 0, 0.95);
 }
 
 /* line 28, ../sass/02._elements.scss */
 .btn-key {
-  border: solid 2px #777777;
+  border: solid 3px rgba(0, 0, 0, 0.5);
   background: #fff;
   color: #555;
 }
 /* line 32, ../sass/02._elements.scss */
 .btn-key:hover {
   background: #fff;
+  color: #555;
 }
 
 /* line 35, ../sass/02._elements.scss */
@@ -69,7 +70,7 @@
 /* line 37, ../sass/02._elements.scss */
 .img-rounded {
   display: inline-block;
-  border: solid 8px #cccccc;
+  border: solid 8px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   margin: 4px;
 }

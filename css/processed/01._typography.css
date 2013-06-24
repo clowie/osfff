@@ -4,7 +4,7 @@
 /* line 18, ../sass/01._typography.scss */
 body {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: #444444;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* line 23, ../sass/01._typography.scss */
