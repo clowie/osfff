@@ -450,35 +450,35 @@ $.fn.imagesLoaded = function( callback ) {
   tl.add(slideEpic);
 
 
-  // SLIDE ======================================================================== //
-  var slideFamous = new TimelineMax();
-  // outro prev slide
-  slideFamous.add(TweenMax.to($('#slide-epic'),0.25,{opacity:0}));
-  slideFamous.add(TweenMax.to($('#slide-epic'),0,{immediateRender:false,css:{display:'none'}}));
+  // // SLIDE ======================================================================== //
+  // var slideFamous = new TimelineMax();
+  // // outro prev slide
+  // slideFamous.add(TweenMax.to($('#slide-epic'),0.25,{opacity:0}));
+  // slideFamous.add(TweenMax.to($('#slide-epic'),0,{immediateRender:false,css:{display:'none'}}));
 
-  // intro
-  slideFamous.add(TweenMax.to($('#slide-famous'),0,{immediateRender:false,css:{display:'block'}}));
-  slideFamous.add(TweenMax.to($('body'),0.75,{backgroundColor:'#d63dbc'}),0);
-  slideFamous.add(TweenMax.from($('#slide-famous .step1'),0.5,{opacity:0,rotationX:360, transformOrigin:"50% 50%", perspective:2000,ease:Expo.easeOut}));
+  // // intro
+  // slideFamous.add(TweenMax.to($('#slide-famous'),0,{immediateRender:false,css:{display:'block'}}));
+  // slideFamous.add(TweenMax.to($('body'),0.75,{backgroundColor:'#d63dbc'}),0);
+  // slideFamous.add(TweenMax.from($('#slide-famous .step1'),0.5,{opacity:0,rotationX:360, transformOrigin:"50% 50%", perspective:2000,ease:Expo.easeOut}));
 
-  var slideFamous1 = new TimelineMax();
-  slideFamous1.add(TweenMax.from($('#slide-famous .step1'),0.25,{top:210,ease:Expo.easeInOut}));
-  slideFamous1.add(TweenMax.to($('#slide-famous .step2'),0,{immediateRender:false,css:{display:'block'}}));
-  slideFamous1.add(TweenMax.from($('#slide-famous .step2'),0.25,{opacity:0}));
+  // var slideFamous1 = new TimelineMax();
+  // slideFamous1.add(TweenMax.from($('#slide-famous .step1'),0.25,{top:210,ease:Expo.easeInOut}));
+  // slideFamous1.add(TweenMax.to($('#slide-famous .step2'),0,{immediateRender:false,css:{display:'block'}}));
+  // slideFamous1.add(TweenMax.from($('#slide-famous .step2'),0.25,{opacity:0}));
 
-  var slideFamous2 = new TimelineMax();
-  slideFamous2.add(TweenMax.to($('#slide-famous .step2'),0.5,{opacity:0}));
-  slideFamous2.add(TweenMax.to($('#slide-famous .step2 img'),0.5,{rotationY:720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeIn, delay:-0.5}));
-  slideFamous2.add(TweenMax.to($('#slide-famous .step2'),0,{immediateRender:false,css:{display:'none'}}));
-  slideFamous2.add(TweenMax.from($('#slide-famous .step3'),0.01,{css:{display:'none'}}));
-  slideFamous2.add(TweenMax.from($('#slide-famous .step3'),0.5,{opacity:0,delay:0.01}));
-  slideFamous2.add(TweenMax.from($('#slide-famous .step3 img'),0.5,{rotationY:720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeOut, delay:-0.5}));
-  slideFamous2.add(TweenMax.to($('body'),0.5,{backgroundColor:'#344cb1',delay:-0.5}));
+  // var slideFamous2 = new TimelineMax();
+  // slideFamous2.add(TweenMax.to($('#slide-famous .step2'),0.5,{opacity:0}));
+  // slideFamous2.add(TweenMax.to($('#slide-famous .step2 img'),0.5,{rotationY:720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeIn, delay:-0.5}));
+  // slideFamous2.add(TweenMax.to($('#slide-famous .step2'),0,{immediateRender:false,css:{display:'none'}}));
+  // slideFamous2.add(TweenMax.from($('#slide-famous .step3'),0.01,{css:{display:'none'}}));
+  // slideFamous2.add(TweenMax.from($('#slide-famous .step3'),0.5,{opacity:0,delay:0.01}));
+  // slideFamous2.add(TweenMax.from($('#slide-famous .step3 img'),0.5,{rotationY:720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeOut, delay:-0.5}));
+  // slideFamous2.add(TweenMax.to($('body'),0.5,{backgroundColor:'#344cb1',delay:-0.5}));
 
 
-  tl.add(slideFamous);
-  tl.add(slideFamous1);
-  tl.add(slideFamous2);
+  // tl.add(slideFamous);
+  // tl.add(slideFamous1);
+  // tl.add(slideFamous2);
 
 
   // SLIDE ======================================================================== //
