@@ -108,6 +108,7 @@
 }
 
 .js {
+	#slide-title h1 { color: rgba(0,0,0,.75); }
 	#slide-github,#slide-famous,#slide-learning,#slide-me { color: $text_light; }
 	#slide-learning h3 { color: $text_dark; }
 	#slide-learning {
@@ -135,7 +136,25 @@
 		}	
 	}
 	#slide-success {
-		h2 { line-height: .8; }
+		h2 { 
+			line-height: .8; 
+			color: $text_light; 
+			.small {
+				color: $text_dark;
+				a {
+					color: $text_dark;
+				}
+			}
+			a {
+				color: $text_light; 
+				opacity: .8;
+				&:hover { 
+					opacity: 1;
+				}
+			}
+		}
+
+
 		.step {
 			position: absolute;
 			top: 180px;
@@ -160,6 +179,11 @@
 		}
 		.step4 {
 			top: 60px;
+		}
+	}
+	#slide-secrets {
+		h2, h3 {
+			color: $text_light;
 		}
 	}
 	#slide-how {
@@ -190,6 +214,7 @@
 	}
 	#slide-tips {
 		padding-top: 60px;
+		h2,h3 { color: $text_light; }
 		.step {
 			position: absolute;
 			width: 100%;
@@ -199,6 +224,7 @@
 		}
 	}
 	#slide-timid {
+		h2 { color: $text_light; }
 		.step {
 			position: absolute;
 			width: 100%;
@@ -208,8 +234,12 @@
 		}
 	}
 	#slide-action {
+		h5 { color: $text_light; }
 		.step {
 			position: relative;
 		}
+	}
+	#slide-end,#slide-appendix {
+		color: $text_light;
 	}
 }

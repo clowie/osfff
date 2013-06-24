@@ -1474,13 +1474,13 @@ textarea {
 /* line 28, ../sass/00._global.scss */
 ::-moz-selection {
   background: #555555;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 
 /* line 29, ../sass/00._global.scss */
 ::selection {
   background: #555555;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 
 /* line 31, ../sass/00._global.scss */
@@ -1497,16 +1497,16 @@ html, body {
 
 /* line 41, ../sass/00._global.scss */
 a {
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(0, 0, 0, 0.8);
   /* &:focus { outline: thin dotted; } */
 }
 /* line 69, ../sass/_modules/_mixins.scss */
 a:link {
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(0, 0, 0, 0.8);
 }
 /* line 70, ../sass/_modules/_mixins.scss */
 a:visited {
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(0, 0, 0, 0.8);
 }
 /* line 71, ../sass/_modules/_mixins.scss */
 a:hover {
@@ -1531,7 +1531,7 @@ a:hover, a:active {
 /* line 18, ../sass/01._typography.scss */
 body {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: rgba(0, 0, 0, 0.8);
+  color: black;
 }
 
 /* line 23, ../sass/01._typography.scss */
@@ -1626,7 +1626,7 @@ pre {
   display: inline-block;
   *display: block;
   *zoom: 1;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   background: #555;
   margin: 0 0.1em;
   padding: 0.2em 0.5em;
@@ -1635,52 +1635,53 @@ pre {
 }
 /* line 69, ../sass/_modules/_mixins.scss */
 .btn:link {
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 /* line 70, ../sass/_modules/_mixins.scss */
 .btn:visited {
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 /* line 71, ../sass/_modules/_mixins.scss */
 .btn:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 /* line 72, ../sass/_modules/_mixins.scss */
 .btn:active {
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 /* line 25, ../sass/02._elements.scss */
 .btn:hover {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* line 28, ../sass/02._elements.scss */
 .btn-key {
+  opacity: .75;
   border: solid 3px rgba(0, 0, 0, 0.5);
   background: #fff;
-  color: #555;
+  color: #000;
 }
-/* line 32, ../sass/02._elements.scss */
+/* line 33, ../sass/02._elements.scss */
 .btn-key:hover {
   background: #fff;
-  color: #555;
+  color: #000;
 }
 
-/* line 35, ../sass/02._elements.scss */
+/* line 36, ../sass/02._elements.scss */
 .img-fill {
   width: 100%;
 }
 
-/* line 36, ../sass/02._elements.scss */
+/* line 37, ../sass/02._elements.scss */
 .img-left {
   float: left;
   margin-right: 20px;
 }
 
-/* line 37, ../sass/02._elements.scss */
+/* line 38, ../sass/02._elements.scss */
 .img-rounded {
   display: inline-block;
-  border: solid 8px rgba(0, 0, 0, 0.25);
+  border: solid 8px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   margin: 4px;
 }
@@ -1815,77 +1816,103 @@ pre {
 }
 
 /* line 111, ../sass/03._slides.scss */
-.js #slide-github, .js #slide-famous, .js #slide-learning, .js #slide-me {
-  color: rgba(255, 255, 255, 0.8);
+.js #slide-title h1 {
+  color: rgba(0, 0, 0, 0.75);
 }
 /* line 112, ../sass/03._slides.scss */
-.js #slide-learning h3 {
-  color: rgba(0, 0, 0, 0.8);
+.js #slide-github, .js #slide-famous, .js #slide-learning, .js #slide-me {
+  color: white;
 }
-/* line 114, ../sass/03._slides.scss */
+/* line 113, ../sass/03._slides.scss */
+.js #slide-learning h3 {
+  color: black;
+}
+/* line 115, ../sass/03._slides.scss */
 .js #slide-learning .step1 {
   margin-top: 60px;
   letter-spacing: 1px;
 }
-/* line 118, ../sass/03._slides.scss */
+/* line 119, ../sass/03._slides.scss */
 .js #slide-learning .step2, .js #slide-learning .step3, .js #slide-learning .step4 {
   position: absolute;
   top: 160px;
   width: 100%;
   letter-spacing: 1px;
 }
-/* line 126, ../sass/03._slides.scss */
+/* line 127, ../sass/03._slides.scss */
 .js #slide-me .title {
   margin-top: 60px;
   letter-spacing: 1px;
 }
-/* line 130, ../sass/03._slides.scss */
+/* line 131, ../sass/03._slides.scss */
 .js #slide-me .step {
   position: absolute;
   top: 270px;
   width: 100%;
   padding: 0 5%;
 }
-/* line 138, ../sass/03._slides.scss */
+/* line 139, ../sass/03._slides.scss */
 .js #slide-success h2 {
   line-height: .8;
+  color: white;
 }
-/* line 139, ../sass/03._slides.scss */
+/* line 142, ../sass/03._slides.scss */
+.js #slide-success h2 .small {
+  color: black;
+}
+/* line 144, ../sass/03._slides.scss */
+.js #slide-success h2 .small a {
+  color: black;
+}
+/* line 148, ../sass/03._slides.scss */
+.js #slide-success h2 a {
+  color: white;
+  opacity: .8;
+}
+/* line 151, ../sass/03._slides.scss */
+.js #slide-success h2 a:hover {
+  opacity: 1;
+}
+/* line 158, ../sass/03._slides.scss */
 .js #slide-success .step {
   position: absolute;
   top: 180px;
   width: 100%;
   padding: 0 5%;
 }
-/* line 147, ../sass/03._slides.scss */
+/* line 166, ../sass/03._slides.scss */
 .js #slide-hotsnot .step {
   position: absolute;
   width: 100%;
   top: 180px;
 }
-/* line 152, ../sass/03._slides.scss */
+/* line 171, ../sass/03._slides.scss */
 .js #slide-hotsnot .step1a, .js #slide-hotsnot .step1b {
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
-/* line 155, ../sass/03._slides.scss */
+/* line 174, ../sass/03._slides.scss */
 .js #slide-hotsnot .step1a, .js #slide-hotsnot .step1b, .js #slide-hotsnot .step2a, .js #slide-hotsnot .step2b {
   position: relative;
 }
-/* line 158, ../sass/03._slides.scss */
+/* line 177, ../sass/03._slides.scss */
 .js #slide-hotsnot .step3 {
   top: 240px;
 }
-/* line 161, ../sass/03._slides.scss */
+/* line 180, ../sass/03._slides.scss */
 .js #slide-hotsnot .step4 {
   top: 60px;
 }
-/* line 166, ../sass/03._slides.scss */
+/* line 185, ../sass/03._slides.scss */
+.js #slide-secrets h2, .js #slide-secrets h3 {
+  color: white;
+}
+/* line 190, ../sass/03._slides.scss */
 .js #slide-how .title {
   position: absolute;
   top: 30px;
   width: 100%;
 }
-/* line 171, ../sass/03._slides.scss */
+/* line 195, ../sass/03._slides.scss */
 .js #slide-how .step {
   position: absolute;
   width: 100%;
@@ -1893,7 +1920,7 @@ pre {
   left: 0;
   padding: 0 5%;
 }
-/* line 180, ../sass/03._slides.scss */
+/* line 204, ../sass/03._slides.scss */
 .js #slide-demo .step {
   position: absolute;
   width: 100%;
@@ -1901,15 +1928,19 @@ pre {
   left: 0;
   padding: 0 5%;
 }
-/* line 187, ../sass/03._slides.scss */
+/* line 211, ../sass/03._slides.scss */
 .js #slide-demo .step-1 {
   top: 30px;
 }
-/* line 191, ../sass/03._slides.scss */
+/* line 215, ../sass/03._slides.scss */
 .js #slide-tips {
   padding-top: 60px;
 }
-/* line 193, ../sass/03._slides.scss */
+/* line 217, ../sass/03._slides.scss */
+.js #slide-tips h2, .js #slide-tips h3 {
+  color: white;
+}
+/* line 218, ../sass/03._slides.scss */
 .js #slide-tips .step {
   position: absolute;
   width: 100%;
@@ -1917,7 +1948,11 @@ pre {
   left: 0;
   padding: 0 5%;
 }
-/* line 202, ../sass/03._slides.scss */
+/* line 227, ../sass/03._slides.scss */
+.js #slide-timid h2 {
+  color: white;
+}
+/* line 228, ../sass/03._slides.scss */
 .js #slide-timid .step {
   position: absolute;
   width: 100%;
@@ -1925,7 +1960,15 @@ pre {
   left: 0;
   padding: 0 5%;
 }
-/* line 211, ../sass/03._slides.scss */
+/* line 237, ../sass/03._slides.scss */
+.js #slide-action h5 {
+  color: white;
+}
+/* line 238, ../sass/03._slides.scss */
 .js #slide-action .step {
   position: relative;
+}
+/* line 242, ../sass/03._slides.scss */
+.js #slide-end, .js #slide-appendix {
+  color: white;
 }

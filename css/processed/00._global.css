@@ -676,13 +676,13 @@
 /* line 28, ../sass/00._global.scss */
 ::-moz-selection {
   background: #555555;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 
 /* line 29, ../sass/00._global.scss */
 ::selection {
   background: #555555;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 
 /* line 31, ../sass/00._global.scss */
@@ -699,16 +699,16 @@ html, body {
 
 /* line 41, ../sass/00._global.scss */
 a {
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(0, 0, 0, 0.8);
   /* &:focus { outline: thin dotted; } */
 }
 /* line 69, ../sass/_modules/_mixins.scss */
 a:link {
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(0, 0, 0, 0.8);
 }
 /* line 70, ../sass/_modules/_mixins.scss */
 a:visited {
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(0, 0, 0, 0.8);
 }
 /* line 71, ../sass/_modules/_mixins.scss */
 a:hover {
