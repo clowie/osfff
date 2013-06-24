@@ -37,6 +37,13 @@
 			}
 		});
 
+		tweendeck.next = function() {
+			timeline.play();
+		};
+		tweendeck.prev = function() {
+			timeline.reverse();
+		};
+
 		return tweendeck;
 	};
 

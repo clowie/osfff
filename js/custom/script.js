@@ -518,7 +518,31 @@
 
 
   // send the timeline into TweenDeck - DONE!
-  $.tweendeck(tl);
+  var deck = $.tweendeck(tl);
+
+  // add scroll event control via jQuery mousewheel - https://github.com/brandonaaron/jquery-mousewheel#readme
+  $('body').mousewheel(function(event, delta, deltaX, deltaY) {
+    if (delta > 0) {
+      deck.prev();
+    } else {
+      deck.next();
+    }
+  });
+
+  // add touch control, requires hammer.js - https://github.com/EightMedia/hammer.js/wiki/Getting-Started
+  $('.touch').hammer()
+    .on('swipeleft', '.slide', function(event) {
+      deck.prev();
+    })
+    .on('swipeup', '.slide', function(event) {
+      deck.prev();
+    })
+    .on('swiperight', '.slide', function(event) {
+      deck.next();
+    })
+    .on('swipedown', '.slide', function(event) {
+      deck.next();
+    });
 
 
 }(jQuery));
