@@ -50,7 +50,7 @@
   slideGithub.add(TweenMax.from($('#slide-github .step1'),0.5,{opacity:0}));
   slideGithub.add(TweenMax.from($('#slide-github .step2'),0.5,{opacity:0,rotationY:720, transformOrigin:"50% 50%", perspective:2000,delay:-0.25}));
   slideGithub.add(TweenMax.from($('#octocat'),0.25,{left:-300,delay:0.75}));
-  slideGithub.add(TweenMax.from($('#slide-github .step3'),0.25,{opacity:0,top:50,ease:Expo.easeOut,delay:-0.125}));
+  slideGithub.add(TweenMax.from($('#slide-github .step3'),0.375,{opacity:0,top:160,ease:Back.easeOut,delay:-0.25}));
   tl.add(slideGithub);
 
 
@@ -141,7 +141,7 @@
   slideSuck1.add(TweenMax.from($('#slide-suck .step2'),0.25,{opacity:0}));
   $('#slide-suck .step2').find('span').css({position:'relative'}).each(function() {
     slideSuck1.add(TweenMax.from($(this),0.25,{
-      left:Math.random()*400-200, ease:Expo.easeOut
+      left:Math.random()*1200-600, ease:Back.easeOut
     }),0);
   });
 
@@ -158,17 +158,17 @@
   // intro
   $('#slide-learning .step1').lettering();
   slideLearning.add(TweenMax.to($('#slide-learning'),0,{immediateRender:false,css:{display:'block'}}));
-  slideLearning.add(TweenMax.from($('#slide-learning .step1'),0.5,{opacity:0,letterSpacing:'50px',ease:Expo.easeOut}));
-  slideLearning.add(TweenMax.from($('#slide-learning .step2'),1,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:2000,ease:Expo.easeOut}));
+  slideLearning.add(TweenMax.from($('#slide-learning .step1'),0.5,{opacity:0,letterSpacing:'50px',ease:Back.easeOut}));
+  slideLearning.add(TweenMax.from($('#slide-learning .step2'),1.5,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}));
   slideLearning.add(TweenMax.to($('body'),1,{backgroundColor:'#284e4f'}),0);
 
   var slideLearning1 = new TimelineMax();
-  slideLearning1.add(TweenMax.to($('#slide-learning .step2'),0.25,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:2000}));
-  slideLearning1.add(TweenMax.from($('#slide-learning .step3'),1,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:2000,ease:Expo.easeOut}));
+  slideLearning1.add(TweenMax.to($('#slide-learning .step2'),0.25,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000}));
+  slideLearning1.add(TweenMax.from($('#slide-learning .step3'),1.5,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}));
 
   var slideLearning2 = new TimelineMax();
-  slideLearning2.add(TweenMax.to($('#slide-learning .step3'),0.25,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:2000}));
-  slideLearning2.add(TweenMax.from($('#slide-learning .step4'),1,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:2000,ease:Expo.easeOut}));
+  slideLearning2.add(TweenMax.to($('#slide-learning .step3'),0.25,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000}));
+  slideLearning2.add(TweenMax.from($('#slide-learning .step4'),1.5,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}));
 
   tl.add(slideLearning);
   tl.add(slideLearning1);
@@ -184,17 +184,17 @@
   // intro
   slideMe.add(TweenMax.to($('#slide-me'),0,{immediateRender:false,css:{display:'block'}}));
   slideMe.add(TweenMax.from($('#slide-me'),0.25,{opacity:0}));
-  slideMe.add(TweenMax.from($('#slide-me .step1'),0.25,{opacity:0,rotation:-720,fontSize:'10px',ease:Expo.easeOut}));
+  slideMe.add(TweenMax.from($('#slide-me .step1'),0.25,{opacity:0,rotation:-720,fontSize:'2px',ease:Expo.easeOut}));
   slideMe.add(TweenMax.to($('body'),1,{backgroundColor:'#363942'}),0);
   tl.add(slideMe);
 
   var slideMe1 = new TimelineMax();
-  slideMe1.add(TweenMax.to($('#slide-me .step1'),0.25,{rotation:720,fontSize:'10px',opacity:0,ease:Expo.easeIn}));
-  slideMe1.add(TweenMax.from($('#slide-me .step2'),0.25,{rotation:-720,fontSize:'10px',opacity:0,ease:Expo.easeOut}));
+  slideMe1.add(TweenMax.to($('#slide-me .step1'),0.25,{rotation:720,fontSize:'2px',opacity:0,ease:Expo.easeIn}));
+  slideMe1.add(TweenMax.from($('#slide-me .step2'),0.25,{rotation:-720,fontSize:'2px',opacity:0,ease:Expo.easeOut}));
 
   var slideMe2 = new TimelineMax();
-  slideMe2.add(TweenMax.to($('#slide-me .step2'),0.25,{rotation:720,fontSize:'10px',opacity:0,ease:Expo.easeIn}));
-  slideMe2.add(TweenMax.from($('#slide-me .step3'),0.25,{rotation:-720,fontSize:'10px',opacity:0,ease:Expo.easeOut}));
+  slideMe2.add(TweenMax.to($('#slide-me .step2'),0.25,{rotation:720,fontSize:'2px',opacity:0,ease:Expo.easeIn}));
+  slideMe2.add(TweenMax.from($('#slide-me .step3'),0.25,{rotation:-720,fontSize:'2px',opacity:0,ease:Expo.easeOut}));
 
   tl.add(slideMe);
   tl.add(slideMe1);
@@ -527,6 +527,15 @@
     } else {
       deck.next();
     }
+  });
+
+  $('#btn-prev').on('click',function(e) {
+    e.preventDefault();
+    deck.prev();
+  });
+  $('#btn-next').on('click',function(e) {
+    e.preventDefault();
+    deck.next();
   });
 
 
