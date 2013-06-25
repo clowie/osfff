@@ -10,6 +10,22 @@
 
 .instructions {
   margin-top: $spacing*2;
+  p {
+    font-size: 18px;
+  }
+  .instructions-scroll {
+    border: solid 2px rgba(0,0,0,.2);
+    border-radius: 50%;
+  }
+  .icon-scroll {
+    display: block;
+    font-size: 120px;
+    line-height: .5;
+    opacity: .25;
+  }
+}
+.touch .instructions {
+  display: none;
 }
 .btn {
   @include inline_block();
@@ -60,4 +76,31 @@
     bottom: $spacing;
     right: $spacing;
   }
+}
+.bouncer {
+  position: relative;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -moz-animation-name: bounce;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-moz-keyframes bounce {
+  from { top: 10px; opacity: .3; }
+  to { top: -10px; opacity: .1; }
+}
+@-webkit-keyframes bounce {
+  from { top: 10px; opacity: .3; }
+  to { top: -10px; opacity: .1; }
+}
+@keyframes bounce {
+  from { top: 10px; opacity: .3; }
+  to { top: -10px; opacity: .1; }
 }
