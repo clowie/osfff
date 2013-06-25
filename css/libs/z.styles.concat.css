@@ -1983,46 +1983,46 @@ pre {
 .js #slide-success h2 a:hover {
   opacity: 1;
 }
-/* line 161, ../sass/03._slides.scss */
+/* line 159, ../sass/03._slides.scss */
 .js #slide-success .step {
   position: absolute;
-  top: 270px;
+  top: 240px;
   width: 100%;
   padding: 0 5%;
 }
-/* line 169, ../sass/03._slides.scss */
+/* line 167, ../sass/03._slides.scss */
 .js #slide-hotsnot .step {
   position: absolute;
   width: 100%;
   top: 240px;
 }
-/* line 174, ../sass/03._slides.scss */
+/* line 172, ../sass/03._slides.scss */
 .js #slide-hotsnot .step1a, .js #slide-hotsnot .step1b {
   color: white;
 }
-/* line 177, ../sass/03._slides.scss */
+/* line 175, ../sass/03._slides.scss */
 .js #slide-hotsnot .step1a, .js #slide-hotsnot .step1b, .js #slide-hotsnot .step2a, .js #slide-hotsnot .step2b {
   position: relative;
 }
-/* line 180, ../sass/03._slides.scss */
+/* line 178, ../sass/03._slides.scss */
 .js #slide-hotsnot .step3 {
   top: 270px;
 }
-/* line 183, ../sass/03._slides.scss */
+/* line 181, ../sass/03._slides.scss */
 .js #slide-hotsnot .step4 {
   top: 120px;
 }
-/* line 188, ../sass/03._slides.scss */
+/* line 186, ../sass/03._slides.scss */
 .js #slide-secrets h2, .js #slide-secrets h3 {
   color: white;
 }
-/* line 193, ../sass/03._slides.scss */
+/* line 191, ../sass/03._slides.scss */
 .js #slide-how .title {
   position: absolute;
   top: 120px;
   width: 100%;
 }
-/* line 198, ../sass/03._slides.scss */
+/* line 196, ../sass/03._slides.scss */
 .js #slide-how .step {
   position: absolute;
   width: 100%;
@@ -2030,7 +2030,7 @@ pre {
   left: 0;
   padding: 0 5%;
 }
-/* line 207, ../sass/03._slides.scss */
+/* line 205, ../sass/03._slides.scss */
 .js #slide-demo .step {
   position: absolute;
   width: 100%;
@@ -2038,19 +2038,19 @@ pre {
   left: 0;
   padding: 0 5%;
 }
-/* line 214, ../sass/03._slides.scss */
+/* line 212, ../sass/03._slides.scss */
 .js #slide-demo .step-1 {
   top: 30px;
 }
-/* line 218, ../sass/03._slides.scss */
+/* line 216, ../sass/03._slides.scss */
 .js #slide-tips {
   padding-top: 60px;
 }
-/* line 220, ../sass/03._slides.scss */
+/* line 218, ../sass/03._slides.scss */
 .js #slide-tips h2, .js #slide-tips h3 {
   color: white;
 }
-/* line 221, ../sass/03._slides.scss */
+/* line 219, ../sass/03._slides.scss */
 .js #slide-tips .step {
   position: absolute;
   width: 100%;
@@ -2058,11 +2058,11 @@ pre {
   left: 0;
   padding: 0 5%;
 }
-/* line 230, ../sass/03._slides.scss */
+/* line 228, ../sass/03._slides.scss */
 .js #slide-timid h2 {
   color: white;
 }
-/* line 231, ../sass/03._slides.scss */
+/* line 229, ../sass/03._slides.scss */
 .js #slide-timid .step {
   position: absolute;
   width: 100%;
@@ -2070,15 +2070,15 @@ pre {
   left: 0;
   padding: 0 5%;
 }
-/* line 240, ../sass/03._slides.scss */
+/* line 238, ../sass/03._slides.scss */
 .js #slide-action h5 {
   color: white;
 }
-/* line 241, ../sass/03._slides.scss */
+/* line 239, ../sass/03._slides.scss */
 .js #slide-action .step {
   position: relative;
 }
-/* line 245, ../sass/03._slides.scss */
+/* line 243, ../sass/03._slides.scss */
 .js #slide-end, .js #slide-appendix {
   color: white;
 }

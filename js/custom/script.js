@@ -26,9 +26,9 @@
   intro.add(TweenMax.to($('#slide-title'),0,{immediateRender:false,css:{display:'block'}}));
   intro.add(TweenMax.fromTo($('body'),0.5,{backgroundColor:'#fff'},{delay:0.5,backgroundColor:'#99cee2'}));
   $('#slide-title h1 span').css({position:'relative'}).each(function() {
-    intro.add(TweenMax.from(this, 2, {css:{top: Math.random()*200+600, left: (Math.random()*1000)-500, rotation:Math.random()*720-360}, ease:Expo.easeOut}),1.25);
+    intro.add(TweenMax.from(this, 2, {css:{top: Math.random()*200+600, left: (Math.random()*1000)-500, rotation:Math.random()*720-360}, ease:Back.easeOut}),1.25);
   });
-  intro.add(TweenMax.from($('#author,.instructions'), 0.5, {opacity:0}));
+  intro.add(TweenMax.from($('#author,.instructions'), 0.5, {opacity:0,delay:0.25}));
   tl.add(intro);
 
 
@@ -39,7 +39,7 @@
 
   // for each slide, animate out the previous content
   $('#slide-title h1 span').css({position:'relative'}).each(function() {
-    slideGithub.add(TweenMax.to(this, 1.5, {css:{opacity:0, top: Math.random()*-200-400, left: (Math.random()*1000)-500, rotation:Math.random()*720-360}, ease:Expo.easeInOut}),0);
+    slideGithub.add(TweenMax.to(this, 1.5, {css:{opacity:0, top: Math.random()*-200-400, left: (Math.random()*1000)-500, rotation:Math.random()*720-360}, ease:Expo.easeIn}),0);
   });
   slideGithub.add(TweenMax.to($('#author,.instructions').css({position:'relative'}), 0.5, {opacity:0}),0);
   slideGithub.add(TweenMax.to($('#slide-title'),0,{immediateRender:false,css:{display:'none'}}));
@@ -77,21 +77,21 @@
   slideWhy1.add(TweenMax.to($('#slide-why .step1 h1'),0.25,{fontSize:'120px'}));
   slideWhy1.add(TweenMax.to($('#slide-why .step1'),0.25,{top:30}),0);
   slideWhy1.add(TweenMax.from($('#slide-why .step2'),0.5,{opacity:0}));
-  slideWhy1.add(TweenMax.from($('#slide-why .step2 .step-a'),0.5,{right:-400,ease:Expo.easeOut}),0);
+  slideWhy1.add(TweenMax.from($('#slide-why .step2 .step-a'),0.5,{right:-400,ease:Bounce.easeOut}),0);
   slideWhy1.add(TweenMax.from($('#slide-why .step2 .img-left'),0.5,{rotationY:-720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeOut}),0);
 
   var slideWhy2 = new TimelineMax();
   slideWhy2.add(TweenMax.to($('#slide-why .step2'),0.25,{opacity:0}));
   slideWhy2.add(TweenMax.to($('#slide-why .step2 .img-left'),0.5,{rotationY:720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeInOut}),0);
   slideWhy2.add(TweenMax.from($('#slide-why .step3 .img-left'),0.5,{rotationY:-720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeInOut}),0);
-  slideWhy2.add(TweenMax.from($('#slide-why .step3 .step-a'),0.5,{right:-400,ease:Expo.easeOut}),0);
+  slideWhy2.add(TweenMax.from($('#slide-why .step3 .step-a'),0.5,{right:-400,ease:Bounce.easeOut}),0);
   slideWhy2.add(TweenMax.from($('#slide-why .step3'),0.5,{opacity:0}),0);
 
   var slideWhy3 = new TimelineMax();
   slideWhy3.add(TweenMax.to($('#slide-why .step3'),0.25,{opacity:0}));
   slideWhy3.add(TweenMax.to($('#slide-why .step3 .img-left'),0.5,{rotationY:720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeInOut}),0);
   slideWhy3.add(TweenMax.from($('#slide-why .step4 .img-left'),0.5,{rotationY:-720, transformOrigin:"50% 50%", perspective:2000, ease:Expo.easeInOut}),0);
-  slideWhy3.add(TweenMax.from($('#slide-why .step4 .step-a'),0.5,{right:-400,ease:Expo.easeOut}),0);
+  slideWhy3.add(TweenMax.from($('#slide-why .step4 .step-a'),0.5,{right:-400,ease:Bounce.easeOut}),0);
   slideWhy3.add(TweenMax.from($('#slide-why .step4'),0.5,{opacity:0}),0);
 
   var slideWhy4 = new TimelineMax();
@@ -124,6 +124,7 @@
   var slideSuck = new TimelineMax();
   // outro prev slide
   slideSuck.add(TweenMax.to($('#slide-epic'),0.25,{opacity:0}));
+  slideSuck.add(TweenMax.to($('#slide-epic img'),0.25,{opacity:0,top:150,ease:Expo.easeIn}));
   slideSuck.add(TweenMax.to($('#slide-epic'),0,{immediateRender:false,css:{display:'none'}}));
 
   // intro
@@ -141,7 +142,7 @@
   slideSuck1.add(TweenMax.from($('#slide-suck .step2'),0.25,{opacity:0}));
   $('#slide-suck .step2').find('span').css({position:'relative'}).each(function() {
     slideSuck1.add(TweenMax.from($(this),0.25,{
-      left:Math.random()*1200-600, ease:Back.easeOut
+      left:Math.random()*1440-720, ease:Expo.easeOut
     }),0);
   });
 
@@ -159,16 +160,16 @@
   $('#slide-learning .step1').lettering();
   slideLearning.add(TweenMax.to($('#slide-learning'),0,{immediateRender:false,css:{display:'block'}}));
   slideLearning.add(TweenMax.from($('#slide-learning .step1'),0.5,{opacity:0,letterSpacing:'50px',ease:Back.easeOut}));
-  slideLearning.add(TweenMax.from($('#slide-learning .step2'),1.5,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}));
+  slideLearning.add(TweenMax.from($('#slide-learning .step2'),1,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}),0);
   slideLearning.add(TweenMax.to($('body'),1,{backgroundColor:'#284e4f'}),0);
 
   var slideLearning1 = new TimelineMax();
-  slideLearning1.add(TweenMax.to($('#slide-learning .step2'),0.25,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000}));
-  slideLearning1.add(TweenMax.from($('#slide-learning .step3'),1.5,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}));
+  slideLearning1.add(TweenMax.to($('#slide-learning .step2'),0.2,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000}));
+  slideLearning1.add(TweenMax.from($('#slide-learning .step3'),1,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}));
 
   var slideLearning2 = new TimelineMax();
-  slideLearning2.add(TweenMax.to($('#slide-learning .step3'),0.25,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000}));
-  slideLearning2.add(TweenMax.from($('#slide-learning .step4'),1.5,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}));
+  slideLearning2.add(TweenMax.to($('#slide-learning .step3'),0.2,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000}));
+  slideLearning2.add(TweenMax.from($('#slide-learning .step4'),1,{opacity:0,rotationX:90, transformOrigin:"50% bottom", perspective:1000,ease:Elastic.easeOut}));
 
   tl.add(slideLearning);
   tl.add(slideLearning1);
@@ -184,7 +185,7 @@
   // intro
   slideMe.add(TweenMax.to($('#slide-me'),0,{immediateRender:false,css:{display:'block'}}));
   slideMe.add(TweenMax.from($('#slide-me'),0.25,{opacity:0}));
-  slideMe.add(TweenMax.from($('#slide-me .step1'),0.25,{opacity:0,rotation:-720,fontSize:'2px',ease:Expo.easeOut}));
+  slideMe.add(TweenMax.from($('#slide-me .step1'),0.25,{opacity:0,rotation:-720,fontSize:'1px',ease:Expo.easeOut}));
   slideMe.add(TweenMax.to($('body'),1,{backgroundColor:'#363942'}),0);
   tl.add(slideMe);
 
@@ -222,31 +223,6 @@
   slideSuccess2.add(TweenMax.to($('#slide-success .step2'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}));
   slideSuccess2.add(TweenMax.from($('#slide-success .step3'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}),0);
   tl.add(slideSuccess2);
-
-  var slideSuccess3 = new TimelineMax();
-  slideSuccess3.add(TweenMax.to($('#slide-success .step3'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}));
-  slideSuccess3.add(TweenMax.from($('#slide-success .step4'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}),0);
-  tl.add(slideSuccess3);
-
-  var slideSuccess4 = new TimelineMax();
-  slideSuccess4.add(TweenMax.to($('#slide-success .step4'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}));
-  slideSuccess4.add(TweenMax.from($('#slide-success .step5'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}),0);
-  tl.add(slideSuccess4);
-
-  var slideSuccess5 = new TimelineMax();
-  slideSuccess5.add(TweenMax.to($('#slide-success .step5'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}));
-  slideSuccess5.add(TweenMax.from($('#slide-success .step6'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}),0);
-  tl.add(slideSuccess5);
-
-  var slideSuccess6 = new TimelineMax();
-  slideSuccess6.add(TweenMax.to($('#slide-success .step6'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}));
-  slideSuccess6.add(TweenMax.from($('#slide-success .step7'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}),0);
-  tl.add(slideSuccess6);
-
-  var slideSuccess7 = new TimelineMax();
-  slideSuccess7.add(TweenMax.to($('#slide-success .step7'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}));
-  slideSuccess7.add(TweenMax.from($('#slide-success .step8'),0.25,{opacity:0,rotationX:Math.random()*90,rotationY:Math.random()*90, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000}),0);
-  tl.add(slideSuccess7);
 
 
   // SLIDE ======================================================================== //
@@ -313,6 +289,7 @@
 
   // intro
   slideHow.add(TweenMax.to($('#slide-how'),0,{immediateRender:false,css:{display:'block'}}));
+  slideHow.add(TweenMax.from($('#slide-how'),0.25,{opacity:0,top:40,ease:Expo.easeOut}));
   $('#slide-how .step').eq(0).find('.step-a span').css('position','relative').each(function(index) {
     slideHow.add(TweenMax.from($(this),0.25,{opacity:0,left:Math.random()*800-400,top:-50,ease:Back.easeOut}),0.25+index*0.025);
   });
@@ -357,7 +334,7 @@
     slideHow4.add(TweenMax.from($(this),0.25,{opacity:0,left:Math.random()*800-400,top:-50,ease:Back.easeOut}),0.25+index*0.025);
   });
   $('#slide-how .step').eq(4).find('.step-b span').css('position','relative').each(function(index) {
-    slideHow4.add(TweenMax.from($(this),0.25,{opacity:0,left:Math.random()*800-400,top:200,ease:Back.easeOut}),0.25+index*0.025);
+    slideHow4.add(TweenMax.from($(this),0.2,{opacity:0,left:Math.random()*800-400,top:200,ease:Back.easeOut}),0.2+index*0.0125);
   });
   tl.add(slideHow4);
 
@@ -461,10 +438,52 @@
 
 
   // SLIDE ======================================================================== //
+  var slideOpen = new TimelineMax();
+  // outro prev slide
+  slideOpen.add(TweenMax.to($('#slide-timid'),0.25,{opacity:0}));
+  slideOpen.add(TweenMax.to($('#slide-timid'),0,{immediateRender:false,css:{display:'none'}}));
+
+  // intro
+  $('#slide-open .step').css({display:'none'}).eq(0).css({display:'block'});
+  slideOpen.add(TweenMax.to($('#slide-open'),0,{immediateRender:false,css:{display:'block'}}));
+  slideOpen.add(TweenMax.to($('body'),1,{backgroundColor:'#DDFF8C'}),0);
+  slideOpen.add(TweenMax.from($('#slide-open .step').eq(0),0.5,{opacity:0,rotationX:Math.random()*360,rotationY:Math.random()*360, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000,ease:Back.easeOut}),0.5);
+  tl.add(slideOpen);
+
+  var slideOpen1 = new TimelineMax();
+  slideOpen1.add(TweenMax.to($('#slide-open .step').eq(0),0.2,{opacity:0}));
+  slideOpen1.add(TweenMax.to($('#slide-open .step').eq(0),0.01,{immediateRender:false,css:{display:'none'}}));
+  slideOpen1.add(TweenMax.to($('#slide-open .step').eq(1),0.01,{immediateRender:false,css:{display:'block'},delay:0.01}));
+  slideOpen1.add(TweenMax.from($('#slide-open .step').eq(1),0.5,{opacity:0,rotationX:Math.random()*360,rotationY:Math.random()*360, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000,ease:Back.easeOut}));
+  tl.add(slideOpen1);
+
+  var slideOpen2 = new TimelineMax();
+  slideOpen2.add(TweenMax.to($('#slide-open .step').eq(1),0.2,{opacity:0}));
+  slideOpen2.add(TweenMax.to($('#slide-open .step').eq(1),0.01,{immediateRender:false,css:{display:'none'}}));
+  slideOpen2.add(TweenMax.to($('#slide-open .step').eq(2),0.01,{immediateRender:false,css:{display:'block'},delay:0.01}));
+  slideOpen2.add(TweenMax.from($('#slide-open .step').eq(2),0.5,{opacity:0,rotationX:Math.random()*360,rotationY:Math.random()*360, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000,ease:Back.easeOut}));
+  tl.add(slideOpen2);
+
+  var slideOpen3 = new TimelineMax();
+  slideOpen3.add(TweenMax.to($('#slide-open .step').eq(2),0.2,{opacity:0}));
+  slideOpen3.add(TweenMax.to($('#slide-open .step').eq(2),0.01,{immediateRender:false,css:{display:'none'}}));
+  slideOpen3.add(TweenMax.to($('#slide-open .step').eq(3),0.01,{immediateRender:false,css:{display:'block'},delay:0.01}));
+  slideOpen3.add(TweenMax.from($('#slide-open .step').eq(3),0.5,{opacity:0,rotationX:Math.random()*360,rotationY:Math.random()*360, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000,ease:Back.easeOut}));
+  tl.add(slideOpen3);
+
+  var slideOpen4 = new TimelineMax();
+  slideOpen4.add(TweenMax.to($('#slide-open .step').eq(3),0.2,{opacity:0}));
+  slideOpen4.add(TweenMax.to($('#slide-open .step').eq(3),0.01,{immediateRender:false,css:{display:'none'}}));
+  slideOpen1.add(TweenMax.to($('#slide-open .step').eq(4),0.01,{immediateRender:false,css:{display:'block'},delay:0.01}));
+  slideOpen4.add(TweenMax.from($('#slide-open .step').eq(4),0.5,{opacity:0,rotationX:Math.random()*360,rotationY:Math.random()*360, transformOrigin:Math.round(Math.random()*100)+'% '+Math.round(Math.random()*100)+'%'+' '+(Math.round(Math.random()*400)-200), perspective:2000,ease:Back.easeOut}));
+  tl.add(slideOpen4);
+
+
+  // SLIDE ======================================================================== //
   var slideAction = new TimelineMax();
   // outro prev slide
-  slideAction.add(TweenMax.to($('#slide-timid'),0.25,{opacity:0}));
-  slideAction.add(TweenMax.to($('#slide-timid'),0,{immediateRender:false,css:{display:'none'}}));
+  slideAction.add(TweenMax.to($('#slide-open'),0.25,{opacity:0}));
+  slideAction.add(TweenMax.to($('#slide-open'),0,{immediateRender:false,css:{display:'none'}}));
 
   // intro
   slideAction.add(TweenMax.to($('#slide-action'),0,{immediateRender:false,css:{display:'block'}}));
