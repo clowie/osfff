@@ -27,16 +27,17 @@
 
 		// Keyboard events
 		$(document).on('keydown', function(e){
-			// down/right arrow, space = play forward
-			if (e.keyCode === 39 || e.keyCode === 32 || e.keyCode === 40) {
+			// down/right arrow, pagedown, space = play forward
+			if (e.keyCode === 34 || e.keyCode === 39 || e.keyCode === 32 || e.keyCode === 40) {
 				timeline.play();
 			}
-			// up/left arrow = rewind
-			else if (e.keyCode === 37 || e.keyCode === 38) {
+			// up/left arrow, pageup = rewind
+			else if (e.keyCode === 33 || e.keyCode === 37 || e.keyCode === 38) {
 				timeline.reverse();
 			}
 		});
 
+		// Public Functions
 		tweendeck.next = function() {
 			timeline.play();
 		};
