@@ -2001,6 +2001,7 @@ else {
 			}
 		});
 
+		// Public Functions
 		tweendeck.next = function() {
 			timeline.play();
 		};
@@ -2139,7 +2140,6 @@ else {
   var slideSuck = new TimelineMax();
   // outro prev slide
   slideSuck.add(TweenMax.to($('#slide-epic'),0.25,{opacity:0}));
-  slideSuck.add(TweenMax.to($('#slide-epic img'),0.25,{opacity:0,top:150,ease:Expo.easeIn}));
   slideSuck.add(TweenMax.to($('#slide-epic'),0,{immediateRender:false,css:{display:'none'}}));
 
   // intro
